@@ -347,10 +347,10 @@ if __name__ == "__main__":
         )
 
     fig.show()
-    print("\nComparison script completed.")
     
-    # Limit number of X ticks to be readable
-    # fig.update_xaxes(nticks=20)
-
-    fig.show()
+    # Export to Excel
+    excel_filename = "savings_strategies.xlsx"
+    df.to_excel(excel_filename, index=False)
+    print(f"\nSuccessfully exported data to {excel_filename}")
+    
     print("\nComparison script completed.")
